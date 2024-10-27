@@ -6,26 +6,46 @@ Tecnologías utilizadas: Para el diseño 3D y la simulación para poner a prueba
 
 Contenido del repositorio: La estructura del repositorio para el proyecto "Proyecto-LAB1-Prototipo-Robótico" se organiza en varias carpetas, cada una con archivos y descripciones específicos que corresponden a distintos aspectos del desarrollo y documentación del prototipo robótico. Esta estructura facilita la navegación y acceso a todos los componentes y documentación necesarios para entender, modificar y replicar el proyecto de manera organizada. A continuación se describe cada carpeta y su contenido:
 1) App/: Contiene los archivos de la aplicación de control remoto desarrollada en MIT App Inventor.
+
    app_inventor/: Archivos de diseño y código fuente de la aplicación.
+
    codigo_app/: Código fuente de la app, necesario para el funcionamiento del control del robot.
+
    README.md: Archivo con instrucciones y detalles sobre el uso de la aplicación.
-3) Arduino/: Incluye el código y las instrucciones para programar la placa Arduino que controla el prototipo.
-  codigo_c++/: Código fuente en C++ del robot, programado para la placa Arduino.
-  diagrama_de_flujo/: pseudocódigo donde se detalla la lógica de control del robot.
-  README.md: Instrucciones sobre cómo compilar y ejecutar el código.
-4) Diseño_3D/: Archivos relacionados con el diseño tridimensional del robot.
-  tinkercad/: Modelos 3D creados en Tinkercad para las distintas piezas del robot.
-  README.md: Descripción de cada archivo 3D y su uso en la construcción del prototipo.
-5) Diseño_Electronico/: Archivos del diseño electrónico del robot, necesarios para ensamblar el circuito.
-  tinkercad/: Diseño de circuitos electrónicos en Tinkercad.
-  esquematicos/: Esquemáticos del circuito utilizado en el robot.
-  README.md: Instrucciones y descripción de los circuitos electrónicos.
-6) Informe/: Documentación detallada del proyecto.
-  informe_proyecto.pdf: Informe completo sobre el desarrollo del prototipo, su funcionamiento y otros detalles técnicos.
-7) Presentación/: Material de apoyo para la presentación del proyecto.
-  presentacion_defensa.pdf: Presentación utilizada durante la defensa del proyecto, que resume los puntos clave.
-8) Tutorial/: Guía paso a paso para replicar el proyecto.
-  tutorial.mp4: Instrucciones detalladas para ensamblar, programar y poner en funcionamiento el robot.
+
+2) Arduino/: Incluye el código y las instrucciones para programar la placa Arduino que controla el prototipo.
+ 
+   codigo_c++/: Código fuente en C++ del robot, programado para la placa Arduino.
+ 
+   diagrama_de_flujo/: pseudocódigo donde se detalla la lógica de control del robot.
+
+   README.md: Instrucciones sobre cómo compilar y ejecutar el código.
+
+3) Diseño_3D/: Archivos relacionados con el diseño tridimensional del robot.
+
+   tinkercad/: Modelos 3D creados en Tinkercad para las distintas piezas del robot.
+
+   README.md: Descripción de cada archivo 3D y su uso en la construcción del prototipo.
+
+4) Diseño_Electronico/: Archivos del diseño electrónico del robot, necesarios para ensamblar el circuito.
+
+   tinkercad/: Diseño de circuitos electrónicos en Tinkercad.
+
+   esquematicos/: Esquemáticos del circuito utilizado en el robot.
+
+   README.md: Instrucciones y descripción de los circuitos electrónicos.
+
+5) Informe/: Documentación detallada del proyecto.
+
+   informe_proyecto.pdf: Informe completo sobre el desarrollo del prototipo, su funcionamiento y otros detalles técnicos.
+
+6) Presentación/: Material de apoyo para la presentación del proyecto.
+
+   presentacion_defensa.pdf: Presentación utilizada durante la defensa del proyecto, que resume los puntos clave.
+
+7) Tutorial/: Guía paso a paso para replicar el proyecto.
+
+   tutorial.mp4: Instrucciones detalladas para ensamblar, programar y poner en funcionamiento el robot.
 
 Guía de Instalación:
 
