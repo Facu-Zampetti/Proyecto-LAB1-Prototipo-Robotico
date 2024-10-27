@@ -6,6 +6,18 @@ Importa el archivo .brd:
 En Eagle: Ve a "File" > "Open" y selecciona el archivo .brd.
 Una vez importado, podrás visualizar en detalle el diseño del circuito, incluidas las conexiones, pistas y componentes. Esto también te permitirá realizar simulaciones eléctricas para verificar el correcto funcionamiento antes de la construcción.
 
-Dependencias:
+Dependencias: Para el funcionamiento correcto del circuito electrónico del robot, se utilizan varios componentes esenciales, cada uno de los cuales depende de la placa Arduino Uno R3 para recibir y ejecutar instrucciones de control. A continuación se detallan las dependencias de cada componente:
+1) Arduino Uno R3: Actúa como el microcontrolador central, gestionando las señales y la lógica del circuito. Controla los motores, servomotores, LEDs, la bomba de agua y otros componentes conectados.
+2) LED Rojo y LED Blanco: Estos LEDs, que indican el estado del robot, están conectados a través de resistencias de 1kΩ para limitar la corriente y evitar daños. La Arduino controla su encendido y apagado, generando efectos como parpadeo.
+3) 2 Resistencias de 1kΩ: Limitan la corriente hacia los LEDs y otros componentes sensibles. Estas resistencias protegen los LEDs de picos de corriente, asegurando que operen dentro de sus especificaciones.
+4) 2 Motores de Aficionado (para las orugas): Controlados mediante una shield de motor o un controlador (como el L298N), que permite manejar la dirección y velocidad de cada motor. La placa Arduino envía señales de PWM para controlar los motores.
+5) 4 Microservomotores Posicionales: Los servos permiten el movimiento de las partes móviles del robot, como la transformación de modo tanque a modo humanoide y la orientación de los cañones de agua. La Arduino controla los ángulos de estos servos mediante señales PWM.
+6) Motor de CC (representa la bomba de agua): Este motor permite el funcionamiento de la bomba de agua, controlado por la Arduino a través de un relé o un transistor para activar o desactivar la bomba según las instrucciones del control remoto.
+7) Piezo (Buzzer): Utilizado para generar sonidos de alerta o sirena, el buzzer está controlado por la Arduino, que modula la frecuencia de la señal para crear diferentes tonos.
+8) Pila de 9V: Proporciona energía a todo el sistema. La Arduino regula la energía a los componentes conectados, pero es necesario asegurarse de que el voltaje sea compatible con los diferentes elementos del circuito.
+9) Relé SPDT (representa la placa Bluetooth): Actúa como interfaz para recibir señales desde una aplicación de control remoto. Al recibir señales Bluetooth, el relé activa o desactiva funciones específicas del robot, como el movimiento o la activación de la bomba de agua.
 
-Archivos principales:
+Archivos principales: 
+1) Imagen en formato .png del circuito en Tinkercad.
+2) Archivo .pdf del esquema del circuito.
+3) Archivo .brd con el esquema detallado del circuito
