@@ -13,19 +13,19 @@ Instrucciones para uso o reproducción:
 10. Consideraciones de uso: En primer lugar deberá asegurarse de que el robot cuenta con una buena fuente de energía (9V es lo recomendable). Nótese que al momento de colocarle las baterias, el módulo Bluetooth comenzará a parpadear (esto significa que no se ha establecido una conexión con el control remoto). Cuando usted esté dentro de la aplicación, asegúrese que su dispositivo tenga el Bluetooth activado, y presione el botón en la parte superior de la pantalla que dirá "No conectado...". A continuación se le desplegará una lista con dispositivos a los cuales usted podrá conectarse. En este caso, deberá seleccionar el dispositivo con el nombre "HC-06". Acto seguido, notará que dicha luz ya no seguirá titilando, ergo, la conexión ya está realizada y es estable. Ahora, podrá presionar los diversos controles para controlar el robot.
 
 Dependencias: El control básicamente envía distintas señales en forma de letras del abecedario (en un rango a - k), cada señal activa una función distinta del robot, las cuales se anuncian a continuación: 
-."a" (representado con un dibujo de una sirena): Los LEDs que posee el robot comenzarán a alternarse entre rojo y blanco, además sonará una sirena característica de un vehículo de emergencia.
-."b" (representado con un dibujo de una sirena anulada): Tanto los LEDs, como la sirena se desactivarán. 
-."c" (representado con una flecha hacia arriba): Los motores del robot comenzarán a girar hacia adelante.
-."d" (representado con una flecha hacia atrás): Los motores del robot comenzarán a girar hacia atrás.
-."e" (representado con una flecha hacia la izquierda): El motor izquierdo girará hacia atrás y el motor derecho girará hacia adelante, permitiendo el giro hacia la izquierda.
-."f" (representado con una flecha hacia la derecha): El motor izquierdo girará hacia adelante y el motor derecho girará hacia atrás, permitiendo el giro hacia la derecha.
-."g" (representado con el dibujo de un robot): Se activarán los servomotores de tal forma que permitirá al robot pasar de su modo vehículo a su modo robot.
-."h" (representado con el dibujo de un tanque): Se activarán los servomotores de tal forma que permitirá al robot pasar de su modo robot a su modo vehículo.
-."i" (representado con el dibujo de una gota de agua): La bomba de agua se activará dejando salir un flujo de agua.
-."j" (representado con el dibujo de una gota de agua anulada): La bomba de agua se desactivará impidiendo el paso del agua. 
-."k" (representado por una señal de "alto"): Permitirá anular el movimiento de los motores cuando estén andando, permitiendo un mejor control de la movilidad del robot. 
+1. "a" (representado con un dibujo de una sirena): Los LEDs que posee el robot comenzarán a alternarse entre rojo y blanco, además sonará una sirena característica de un vehículo de emergencia.
+2. "b" (representado con un dibujo de una sirena anulada): Tanto los LEDs, como la sirena se desactivarán. 
+3. "c" (representado con una flecha hacia arriba): Los motores del robot comenzarán a girar hacia adelante.
+4. "d" (representado con una flecha hacia atrás): Los motores del robot comenzarán a girar hacia atrás.
+5. "e" (representado con una flecha hacia la izquierda): El motor izquierdo girará hacia atrás y el motor derecho girará hacia adelante, permitiendo el giro hacia la izquierda.
+6. "f" (representado con una flecha hacia la derecha): El motor izquierdo girará hacia adelante y el motor derecho girará hacia atrás, permitiendo el giro hacia la derecha.
+7. "g" (representado con el dibujo de un robot): Se activarán los servomotores de tal forma que permitirá al robot pasar de su modo vehículo a su modo robot.
+8. "h" (representado con el dibujo de un tanque): Se activarán los servomotores de tal forma que permitirá al robot pasar de su modo robot a su modo vehículo.
+9. "i" (representado con el dibujo de una gota de agua): La bomba de agua se activará dejando salir un flujo de agua.
+10. "j" (representado con el dibujo de una gota de agua anulada): La bomba de agua se desactivará impidiendo el paso del agua. 
+11. "k" (representado por una señal de "alto"): Permitirá anular el movimiento de los motores cuando estén andando, permitiendo un mejor control de la movilidad del robot. 
 
 Archivos principales: 
-Archivo .aia, "Control_Lab1.aia" (aplicación del control hecho con MIT App Inventor)
-Imagen .png, "Codigo Fuente APP" (código fuente de la aplicación hecha con MIT App Inventor)
-Archivo Word, "CodigoFuente, Interfaces, Estructura" (imagenes del código fuente, interfaces y estructura de la aplicación hecha con MIT App Inventor)
+1. Archivo .aia, "Control_Lab1.aia" (aplicación del control hecho con MIT App Inventor)
+2. Imagen .png, "Codigo Fuente APP" (código fuente de la aplicación hecha con MIT App Inventor)
+3. Archivo Word, "CodigoFuente, Interfaces, Estructura" (imagenes del código fuente, interfaces y estructura de la aplicación hecha con MIT App Inventor)
