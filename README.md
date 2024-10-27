@@ -6,9 +6,9 @@ Tecnologías utilizadas: Para el diseño 3D y la simulación para poner a prueba
 
 Contenido del repositorio: La estructura del repositorio para el proyecto "Proyecto-LAB1-Prototipo-Robótico" se organiza en varias carpetas, cada una con archivos y descripciones específicos que corresponden a distintos aspectos del desarrollo y documentación del prototipo robótico. Esta estructura facilita la navegación y acceso a todos los componentes y documentación necesarios para entender, modificar y replicar el proyecto de manera organizada. A continuación se describe cada carpeta y su contenido:
 1) App/: Contiene los archivos de la aplicación de control remoto desarrollada en MIT App Inventor.
-  app_inventor/: Archivos de diseño y código fuente de la aplicación.
-  codigo_app/: Código fuente de la app, necesario para el funcionamiento del control del robot.
-  README.md: Archivo con instrucciones y detalles sobre el uso de la aplicación.
+app_inventor/: Archivos de diseño y código fuente de la aplicación.
+codigo_app/: Código fuente de la app, necesario para el funcionamiento del control del robot.
+README.md: Archivo con instrucciones y detalles sobre el uso de la aplicación.
 2) Arduino/: Incluye el código y las instrucciones para programar la placa Arduino que controla el prototipo.
   codigo_c++/: Código fuente en C++ del robot, programado para la placa Arduino.
   diagrama_de_flujo/: pseudocódigo donde se detalla la lógica de control del robot.
