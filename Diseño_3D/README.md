@@ -9,6 +9,8 @@ Con los archivos descargados, abre Tinkercad e inicia sesión en tu cuenta. Desd
 
 Una vez que el modelo esté importado, puedes visualizarlo y utilizar las herramientas de Tinkercad para realizar cualquier modificación, como cambiar su tamaño o ajustar su forma. Cuando termines, guarda tu diseño en Tinkercad o descarga el archivo modificado en formato .stl si deseas imprimirlo en 3D o compartirlo.
 
-Dependencias:
+Dependencias: 
+Los modelos 3D del robot representan una parte crucial del proyecto, ya que cada componente diseñado debe cumplir con especificaciones precisas para su ensamblaje y funcionamiento adecuado. Estos modelos incluyen el Modelo Completo, el Modelo del Chasis, las Orugas, el Cuerpo y los Cañones. La dependencia de estos archivos de modelos reside en la precisión de cada pieza y en la capacidad de integrarlos para obtener un prototipo funcional. 
+Los archivos .stl en el repositorio son esenciales para el proceso de impresión 3D, pues se pueden descargar y cargar en software de impresión o modelado, como Tinkercad, para visualización, ajuste y preparación de la impresión.
 
 Archivos principales:
