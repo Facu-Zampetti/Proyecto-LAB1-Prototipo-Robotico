@@ -45,7 +45,7 @@ Contenido del repositorio: La estructura del repositorio para el proyecto "Proye
 
 7) Tutorial/: Guía paso a paso para replicar el proyecto.
 
-   tutorial.mp4: Instrucciones detalladas para ensamblar, programar y poner en funcionamiento el robot.
+   tutorial.md: Instrucciones detalladas para ensamblar, programar y poner en funcionamiento el robot.
 
 Guía de Instalación:
 
