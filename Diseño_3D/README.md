@@ -14,3 +14,7 @@ Los modelos 3D del robot representan una parte crucial del proyecto, ya que cada
 Los archivos .stl en el repositorio son esenciales para el proceso de impresión 3D, pues se pueden descargar y cargar en software de impresión o modelado, como Tinkercad, para visualización, ajuste y preparación de la impresión.
 
 Archivos principales:
+1. "completo.stl", diseño 3D del prototipo en su totalidad.
+2. "cuerpo - chasis.stl", diseño 3D del "contenedor" de la placa Arduino, junto con la base del prototipo.
+3. "orugas.stl", diseño 3D del mecanismo de movimiento del prototipo.
+4. "cañones.stl", diseño 3D del mecanismo adherido a la bomba de agua del robot. 
