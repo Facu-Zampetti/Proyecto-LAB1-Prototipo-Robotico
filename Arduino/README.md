@@ -23,4 +23,4 @@ Para el buen funcionamiento del código de C++, se requerirán de ciertos criter
 
 Archivos principales:
 1. Arduino IDE, es el editor de código en donde estará el programa C++.
-2. CodigoTanque.ino, es el código fuente que permite el funcionamiento del robot.
+2. "CodigoTanque.ino", es el código fuente que permite el funcionamiento del robot.
