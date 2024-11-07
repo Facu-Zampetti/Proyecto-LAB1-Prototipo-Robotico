@@ -48,6 +48,51 @@ Contenido del repositorio: La estructura del repositorio para el proyecto "Proye
    tutorial.md: Instrucciones detalladas para ensamblar, programar y poner en funcionamiento el robot.
 
 Guía de Instalación:
+1) Control Remoto:
+   
+   a) Descarga e ingreso a MIT App Inventor para importar el archivo .aia.
+   
+   b) Inicia sesión con tu cuenta de Google.
+   
+   c) Importa el archivo .aia desde tu computadora y ábrelo.
+   
+   d) Prueba la aplicación en tiempo real con Mit AI2 Companion o compila el archivo .apk.
+   
+   e) Distribuye el archivo .apk para instalación en dispositivos finales.
+
+2) Código Arduino:
+   
+   a) Descarga e instala el Arduino IDE desde la página oficial.
+   
+   b) Abre el archivo .ino en el IDE y conecta la placa Arduino.
+   
+   c) Selecciona el modelo de la placa y el puerto correspondiente.
+   
+   d) Instala las bibliotecas necesarias desde el gestor de bibliotecas del IDE.
+   
+   e) Verifica, carga el código en la placa y prueba el proyecto con el Monitor Serial.
+
+3) Diseño 3D:
+   
+   a) Descarga los archivos .stl desde la carpeta Diseño_3D en el repositorio.
+   
+   b) Abre Tinkercad, crea un nuevo diseño e importa los modelos .stl.
+
+   c) Visualiza y modifica los modelos según sea necesario.
+   
+   d) Guarda o exporta los archivos para impresión 3D o distribución.
+
+ 4) Diseño Electrónico:
+
+    a) Localiza la imagen en formato .png del diseño del circuito en el repositorio y ábrela con un visor de imágenes.
+    
+    b) Abre el archivo .pdf del esquema del circuito con un lector de PDF para revisar los detalles.
+    
+    c) Instala un software de diseño de PCB como Eagle o KiCad.
+    
+    d) Importa el archivo .brd en el software instalado para visualizar el diseño del circuito.
+    
+    e) Revisa el diseño y realiza simulaciones eléctricas en el software para verificar su correcto funcionamiento.
 
 Instrucciones para contribuir:
 
