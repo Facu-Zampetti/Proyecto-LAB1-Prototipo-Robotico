@@ -82,7 +82,7 @@ Guía de Instalación:
    
    d) Guarda o exporta los archivos para impresión 3D o distribución.
 
- 4) Diseño Electrónico:
+4) Diseño Electrónico:
 
     a) Localiza la imagen en formato .png del diseño del circuito en el repositorio y ábrela con un visor de imágenes.
     
@@ -95,5 +95,11 @@ Guía de Instalación:
     e) Revisa el diseño y realiza simulaciones eléctricas en el software para verificar su correcto funcionamiento.
 
 Instrucciones para contribuir:
+
+1) Clona el repositorio y crea una rama nueva: Duplica el repositorio en tu entorno local y crea una nueva rama que refleje los cambios específicos que deseas realizar. Nombra la rama de forma descriptiva (por ejemplo, feature/funcion-nueva o fix/error-x).
+
+2) Realiza tus cambios, prueba y documenta: Modifica el código o los archivos necesarios en tu nueva rama. Asegúrate de que los cambios funcionan correctamente probando el código y agregando comentarios o documentación en los archivos, si es necesario. Sigue los estándares de estilo y contribución del proyecto.
+
+3) Envía un Pull Request (PR): Sube tus cambios al repositorio original y abre un PR para revisión. Explica los cambios realizados y por qué son necesarios. Responde a los comentarios o sugerencias del equipo hasta que se apruebe el PR.
 
 Licencia:
