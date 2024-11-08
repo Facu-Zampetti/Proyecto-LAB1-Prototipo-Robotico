@@ -102,4 +102,4 @@ Instrucciones para contribuir:
 
 3) Envía un Pull Request (PR): Sube tus cambios al repositorio original y abre un PR para revisión. Explica los cambios realizados y por qué son necesarios. Responde a los comentarios o sugerencias del equipo hasta que se apruebe el PR.
 
-Licencia:
+Licencia: Copyright © [2024] [PTR4]. Todos los derechos reservados.
