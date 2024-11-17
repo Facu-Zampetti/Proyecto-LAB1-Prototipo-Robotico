@@ -1,4 +1,4 @@
-Nombre del Proyecto: Tanque Bombero - Proyecto LAB 1
+Nombre del Proyecto: PTR4 - Proyecto LAB 1
 
 Descripción: El proyecto consiste en un prototipo robótico innovador basado en una plataforma Arduino Uno, diseñado específicamente para asistir en zonas de incendios. Este tanque transformable, capaz de adoptar una figura humanoide, combina la movilidad robusta de un tanque con la precisión y adaptabilidad de un humanoide. Este diseño único permite al robot cambiar de forma para enfrentar desafíos específicos en operaciones de rescate o apoyo en incendios. Mientras que la forma de tanque le permite moverse con estabilidad en terrenos accidentados y alcanzar zonas de difícil acceso, la transformación a humanoide facilita la manipulación de herramientas y el acceso a áreas reducidas, mejorando su versatilidad en tareas de asistencia en entornos complejos y hostiles.
 
