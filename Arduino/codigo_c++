@@ -1,11 +1,12 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Librerias
 #include <AFMotor.h>
 #include <Servo.h>
 
-//Inicializar pins de los motores
-AF_DCMotor motor1(1, MOTOR12_1KHZ);
-AF_DCMotor motor2(2, MOTOR34_1KHZ);
-AF_DCMotor bomba(3, MOTOR34_1KHZ);
+//Inicializar pines de los motores
+AF_DCMotor motor1(4, MOTOR34_64KHZ);
+AF_DCMotor motor2(2, MOTOR12_64KHZ);
+AF_DCMotor bomba(3, MOTOR34_64KHZ);
 int valor;
 int velocidad = 255;
 
@@ -16,126 +17,104 @@ Servo servo3;
 Servo servo4;
 int angulo = 0;
 
-//Inicializar pin del led
+//Inicializar pines del led
 const int ledPin = 22;
-const int ledPin2 = 23;
-//Bandera del estado del led
+const int ledPin2 = 50;
+
+//Bandera del estado del parpadeo y sirena
 bool parpadeo = false;
-//Control del tiempo del parpadeo
-unsigned long previoMilis = 0;
-//Intervalo de parpadeo en milisegundos
-const long intervalo = 500;
 
 //Inicializar pin del buzzer
-const int buzzerpin = 52; 
-//Notas para la sirena
-#define NOTE_B0  400
-#define NOTE_C1  500
-#define REST      0
-//Melodia de la sirena
-int tempo = 55;
-int melody[] = {
-  NOTE_B0, 8, NOTE_C1, 8, REST
-};
-int notes = sizeof(melody) / sizeof(melody[0]) / 2;
-int wholenote = (60000 * 4) / tempo;
-int noteDuration = 0;
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+const int buzzerpin = 52;
 
-void setup(){
-  //Establece la velocidad en baudios (bits por segundo que se pueden transmitir del modulo bluetooth  
+//Notas para la sirena
+#define NOTE_C5 523.25 
+#define NOTE_D5 587.33
+#define REST      0
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+void setup() {
+  //Configuracion serial
   Serial.begin(9600);
   Serial1.begin(9600);
 
-  //Configuracion del led
+  //Configuracion de los leds
   pinMode(ledPin, OUTPUT);
-  digitalWrite(ledPin, LOW);
   pinMode(ledPin2, OUTPUT);
+  digitalWrite(ledPin, LOW);
   digitalWrite(ledPin2, LOW);
 
   //Configuracion del buzzer
   pinMode(buzzerpin, OUTPUT);
   noTone(buzzerpin);
 
-  //Inicializar pines de los servos
+  //Configuracion de servos
   servo1.attach(9);
   servo2.attach(10);
-  servo3.attach(11);
-  servo4.attach(12);
+  servo3.attach(48);
+  servo4.attach(49);
 
-  //Valor inicial de los servos(0 grados)
-  servo1.write(0); 
+  //Inicializar servos a 0 grados
+  servo1.write(180);
   servo2.write(0);
   servo3.write(0);
-  servo4.write(0); 
+  servo4.write(90);
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-void playSiren() {
-  for (int thisNote = 0; thisNote < notes * 2; thisNote += 2) {
-    // Calcular la duracion de cada nota con el puntillo si es necesario
-    noteDuration = wholenote / abs(melody[thisNote + 1]);
-    if (melody[thisNote + 1] < 0) noteDuration *= 1.5;
-
-    tone(buzzerpin, melody[thisNote], noteDuration * 0.9);
-    delay(noteDuration);
+void blinkingLedAndSiren() {
+  //Ejecutar mientras parpadeo sea verdadero
+  if (parpadeo) {
+    digitalWrite(ledPin, HIGH);
+    tone(buzzerpin, NOTE_D5);
+    delay(500);
+    digitalWrite(ledPin, LOW);
+    digitalWrite(ledPin2, HIGH);
+    tone(buzzerpin, NOTE_C5);
+    delay(500);
+    digitalWrite(ledPin2, LOW);
+  } else {
+    //Asegurarse de apagar buzzer y leds
+    noTone(buzzerpin);
+    digitalWrite(ledPin, LOW);
+    digitalWrite(ledPin2, LOW);
   }
 }
 
-void blinkingLedOn(){
-  if (parpadeo && millis() - previoMilis >= intervalo) {
-    previoMilis = millis();
-    //Alterna el estado de los leds
-    digitalWrite(ledPin, !digitalRead(ledPin));
-    digitalWrite(ledPin2, !digitalRead(ledPin2));
-    playSiren();
-  }
-}  
-
-
-void blinkingLedOff(){
-  digitalWrite(ledPin, LOW);
-  digitalWrite(ledPin2, LOW);
-  noTone(buzzerpin);  
-  parpadeo = false;
+void forward() {
+  motor1.setSpeed(velocidad);
+  motor1.run(FORWARD);
+  motor2.setSpeed(velocidad);
+  motor2.run(FORWARD);
 }
 
-void forward(){
+void back() {
   motor1.setSpeed(velocidad);
-  motor1.run(FORWARD); 
+  motor1.run(BACKWARD);
   motor2.setSpeed(velocidad);
-  motor2.run(FORWARD); 
+  motor2.run(BACKWARD);
 }
-  
-void back(){
+
+void left() {
   motor1.setSpeed(velocidad);
-  motor1.run(BACKWARD); 
+  motor1.run(BACKWARD);
   motor2.setSpeed(velocidad);
-  motor2.run(BACKWARD); 
+  motor2.run(FORWARD);
 }
-  
-void left(){
+
+void right() {
   motor1.setSpeed(velocidad);
-  motor1.run(BACKWARD); 
+  motor1.run(FORWARD);
   motor2.setSpeed(velocidad);
-  motor2.run(FORWARD); 
-}
-  
-void right(){
-  motor1.setSpeed(velocidad);
-  motor1.run(FORWARD); 
-  motor2.setSpeed(velocidad);
-  motor2.run(BACKWARD); 
+  motor2.run(BACKWARD);
 }
 
 void moveServos(int start, int end) {
   int step = (start < end) ? 1 : -1;
   for (angulo = start; angulo != end; angulo += step) {
-    servo1.write(angulo);
+    servo1.write(180-angulo);
     servo2.write(angulo);
     servo3.write(angulo);
-    servo4.write(angulo);
-    delay(15);
+    servo4.write(90-angulo);
+    delay(30);
   }
 }
 
@@ -146,96 +125,86 @@ void robotMode() {
 void vehicleMode() {
   moveServos(90, 0);
 }
-  
-void Stop(){
-  motor1.setSpeed(0); 
-  motor1.run(RELEASE); 
-  motor2.setSpeed(0); 
-  motor2.run(RELEASE); 
+
+void Stop() {
+  motor1.setSpeed(0);
+  motor1.run(RELEASE);
+  motor2.setSpeed(0);
+  motor2.run(RELEASE);
 }
 
-void startWater(){
-  bomba.setSpeed(255); // Velocidad máxima para la bomba
-  bomba.run(FORWARD); // Enciende la bomba
-  //digitalWrite(bombaPin, HIGH);
+void startWater() {
+  bomba.setSpeed(255); 
+  bomba.run(FORWARD);
 }
 
-void endWater(){
-  bomba.run(RELEASE); // Apaga la bomba
-  //digitalWrite(bombaPin, LOW);
+void endWater() {
+  bomba.run(RELEASE);
 }
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-void loop(){
-  if(Serial1.available() > 0){
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+void loop() {
+  //Leer comandos del Bluetooth
+  if (Serial1.available() > 0) {
     valor = Serial1.read();
-    //Detiene los motores cuando se suelte el boton del control remoto
-    Stop(); 
-    
-    //Condicionales para motores y led
+    Stop();
     switch (valor) {
-      
-      case 'a':
+      case 'a': 
         parpadeo = true;
         Serial.println("Prender Luz/Sirena");
         break;
-      
-      case 'b':
-        blinkingLedOff();
+
+      case 'b': 
+        parpadeo = false;
         Serial.println("Apagar Luz/Sirena");
         break;
-      
-      case 'c':
+
+      case 'c': 
         forward();
         Serial.println("Adelante");
         break;
-      
-      case 'd':
+
+      case 'd': 
         back();
-        Serial.println("Atras");
+        Serial.println("Atrás");
         break;
-      
-      case 'e':
+
+      case 'e': 
         left();
         Serial.println("Izquierda");
         break;
-      
-      case 'f':
+
+      case 'f': 
         right();
         Serial.println("Derecha");
         break;
-      
+
       case 'g':
         robotMode();
         Serial.println("Transformar a Robot");
         break;
-      
-      case 'h':
+
+      case 'h': 
         vehicleMode();
         Serial.println("Transformar a Tanque");
         break;
-      
-      case 'i':
+
+      case 'i': 
         startWater();
         Serial.println("Encender bomba de agua");
         break;
 
-      case 'j':
+      case 'j': 
         endWater();
         Serial.println("Apagar bomba de agua");
         break;
-      
-      case 'k':
+
+      case 'k': 
         Stop();
         Serial.println("Detener");
         break;
     }
   }
-   if (parpadeo) {
-    blinkingLedOn();
-    playSiren(); 
-  } 
+  //Llamar a la funcion de parpadeo y sirena
+  blinkingLedAndSiren();
 }
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
