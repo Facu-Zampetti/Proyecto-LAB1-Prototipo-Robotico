@@ -43,7 +43,9 @@ Contenido del repositorio: La estructura del repositorio para el proyecto "Proye
 
    presentacion_defensa.pdf: Presentación utilizada durante la defensa del proyecto, que resume los puntos clave.
 
-7) Tutorial/: Guía paso a paso para replicar el proyecto.
+   Logo.png: Logo de la empresa desarrolladora del proyecto PRT4
+
+8) Tutorial/: Guía paso a paso para replicar el proyecto.
 
    tutorial.md: Instrucciones detalladas para ensamblar, programar y poner en funcionamiento el robot.
 
